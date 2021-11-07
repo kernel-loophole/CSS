@@ -1,0 +1,54 @@
+.box {
+    outline: 50px solid var(--color-primary-dark);
+}
+
+article+* {
+    outline: 50px solid var(--color-primary-dark);
+    padding: 10px;
+    display: inline;
+    block-size: 123px;
+    background-color: black;
+}
+
+article p:first-of-type {
+    color: brown;
+}
+
+
+/* universal selector
+
+* {
+    background-color: aqua;
+}
+*/
+
+section {
+    padding: 10em;
+    background-color: black;
+}
+
+a:hover {
+    outline: 1px dotted green;
+    padding: 12px;
+    background-color: blueviolet;
+    text-align: center;
+    color: chartreuse;
+}
+
+
+/* look for in side child element of the p which is strong */
+
+p strong {
+    background: pink;
+}
+
+top * {
+    background-color: pink;
+}
+
+
+/* target the a tag which has class abc*/
+
+a.abc {
+    background-color: pink;
+}
