@@ -1,0 +1,104 @@
+body {
+    background-color: black;
+}
+
+#text {
+    color: aqua;
+    text-align: left;
+    font-size: 100px;
+}
+
+#text1 {
+    color: darkgreen;
+    font-size: smaller;
+}
+
+#text2 {
+    color: wheat;
+    font-size: 100px;
+    text-align: left;
+}
+
+* {
+    padding: 0;
+    margin: 0
+}
+
+.wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #34495e;
+    color: aqua;
+    font-family: monospace;
+    font-size: 36px;
+    &:before {
+        content: "[";
+    }
+    &:after {
+        content: "]";
+    }
+    &:before,
+    &:after {
+        color: #16a085;
+        animation: flicker 3s infinite;
+    }
+}
+
+span {
+    display: block
+}
+
+p {
+    display: inline-block;
+    height: 40px;
+    overflow: hidden;
+    margin: 25px;
+    font-size: 36px;
+    position: relative
+}
+
+.flip span {
+    animation: flip 8s infinite;
+    transition: .5s;
+}
+
+@keyframes flip {
+    0% {
+        transform: translateY(0)
+    }
+    33% {
+        transform: translateY(-100%)
+    }
+    66% {
+        transform: translateY(-200%)
+    }
+    100% {
+        transform: translateY(0)
+    }
+}
+
+@keyframes flicker {
+    0%,
+    100% {
+        opacity: 0
+    }
+    50% {
+        opacity: 1
+    }
+}
+
+.contain {
+    width: 100%;
+    contain: layout inline size;
+}
+
+@contain(min-width:250px) {
+    .product {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 2rem;
+    }
+}
