@@ -27,6 +27,8 @@ section {
     background-color: black;
 }
 
+
+/*
 a:hover {
     outline: 1px dotted green;
     padding: 12px;
@@ -35,10 +37,12 @@ a:hover {
     color: chartreuse;
 }
 
+*/
+
 
 /* look for in side child element of the p which is strong */
 
-p strong {
+a:ho p strong {
     background: pink;
 }
 
@@ -51,4 +55,113 @@ top * {
 
 a.abc {
     background-color: pink;
+}
+
+button:hover {
+    background-color: black;
+    padding: 10px;
+    color: aliceblue;
+}
+
+button {
+    background-color: blueviolet;
+}
+
+img:hover {
+    padding: 10px;
+}
+
+
+/* LOGICAL PROPERTY*/
+
+.byline {
+    text-align: end;
+}
+
+img {
+    margin-inline-end: 85%;
+}
+
+.display {
+    display: flex;
+    white-space: nowrap;
+}
+
+header {
+    text-align: center;
+    background-color: cadetblue;
+}
+
+@media screen {
+    main {
+        display: grid;
+    }
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+    grid-gap: 1em;
+}
+
+.flex-design {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.flex-design1 {
+    flex: 1;
+    max-inline-size: 200px;
+}
+
+.flex-media {
+    flex: 3;
+}
+
+
+/*
+ avoid directional property
+
+*/
+
+p {
+    margin-block-start: var(--metric-box-spacing);
+}
+
+@media (min-width: 45em) {
+    body {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+    }
+}
+
+main,
+aside {
+    container-type: inline-size;
+}
+
+.media {
+    background-color: var(--color-off-white);
+    margin: var(--metric-box-spacing);
+    padding: var(--metric-box-spacing);
+}
+
+.media-illustration {
+    max-inline-size: 200px;
+    margin: auto;
+}
+
+@container (min-width: 30em) {
+    .media {
+        display: flex;
+        align-items: center;
+        gap: var(--metric-box-spacing);
+    }
+    .media-illustration {
+        flex: 1;
+    }
+    .media-content {
+        flex: 3;
+    }
 }
