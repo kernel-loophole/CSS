@@ -1,4 +1,17 @@
 # CSS
+# Open props
+```CSS
+main {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    max-inline-size: calc(var(--size-content-1) * 4);
+    gap: var(--size-5);
+    padding: var(--size-5);
+}
+```
+
 # wrap class
 ```CSS
 .wrap {
